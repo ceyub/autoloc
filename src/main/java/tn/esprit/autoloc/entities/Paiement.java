@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import tn.esprit.autoloc.entities.enums.ModePaiement;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
@@ -20,10 +21,14 @@ public class Paiement {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idPaiement;
 
-    private double montant;
+    private BigDecimal montant;
 
     private LocalDate datePaiement;
 
     @Enumerated(EnumType.STRING)
     private ModePaiement modePaiement;
+
+    @ManyToOne
+    @JoinColumn(name = "id_contrat")
+    private Contrat contrat;
 }

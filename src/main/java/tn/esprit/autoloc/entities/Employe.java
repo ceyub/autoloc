@@ -12,16 +12,19 @@ import tn.esprit.autoloc.entities.enums.Role;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-
-
-
 public class Employe {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long idEmploye;
-    String nom;
-    String prenom;
+    private long idEmploye;
+
+    private String nom;
+    private String prenom;
 
     @Enumerated(EnumType.STRING)
-    Role role;
+    private Role role;
+
+    @ManyToOne
+    @JoinColumn(name = "id_agence")
+    private Agence agence;
 }
