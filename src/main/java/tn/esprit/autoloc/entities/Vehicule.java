@@ -20,7 +20,7 @@ public class Vehicule {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idVehicule;
+    private Long idVehicule;
 
     private String immatriculation;
     private String marque;

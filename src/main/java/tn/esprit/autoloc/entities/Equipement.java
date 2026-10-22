@@ -17,7 +17,7 @@ public class Equipement {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idEquipement;
+    private Long idEquipement;
 
     private String libelle;
 

@@ -17,7 +17,7 @@ public class Maintenance {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idMaintenance;
+    private Long idMaintenance;
 
     private LocalDate dateDebut;
     private LocalDate dateFin;
